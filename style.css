@@ -1,0 +1,117 @@
+/* Creating the style */
+
+body {
+    margin: 10;
+}
+  
+header {
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: #fff;
+    text-align: left;
+    grid-area: header;
+}
+
+header > h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.3em;;
+      margin-left: 30px;
+}
+  
+#menu {
+    /*padding: 32px;*/
+    background-color: #eee;
+    grid-area: menu;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+nav {
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+ nav > a {
+      padding: 10px;
+      margin: 3px;
+      background-color: rgb(97, 109, 149);
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+}
+
+#top-tiles{
+      display: flex;
+      grid-area: top-tiles;
+      justify-content: space-around;
+      margin-top: 25px;
+  }
+
+.top-image{
+      margin: 15px;
+      width: 400px;
+      height: 200;
+      flex: 33%;
+  }
+
+#indonesia .button-top{
+      position: absolute;
+      bottom: 25%;
+      left: 25%;
+  }
+
+#australia .button-top{
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+
+#switzerland .button-top{
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+}
+
+#where{
+    padding-left: 15px;
+    grid-area: where;
+    background-color: midnightblue;
+    color: white;
+}
+
+#search-bar{
+    grid-area: search-bar;
+}
+  
+#main-content {
+    padding: 32px;
+    grid-area: main;
+    border: 3px solid black;
+}
+  
+footer {
+    padding: 16px;
+    background-color: rgb(9, 9, 30);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    grid-area: footer;
+}
+  
+#grid-container {
+    display: grid;
+    /* At this point all of the grid elements are stacked on top of each other, therefore we need the following: */
+  
+    grid-template-areas: 'header menu'
+                         'top-tiles top-tiles'
+                         'where where'
+                         'search-bar search-bar'
+                          'main main'
+                          'footer footer';
+
+
+}
+  
